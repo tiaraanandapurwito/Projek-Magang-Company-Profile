@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather", serif;
+}
+
+.all-content{
+    background: rgb(255, 255, 255);
+}
+
+html ::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html ::-webkit-scrollbar-thumb{
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+html ::-webkit-scrollbar{
+    width: 10px;
+}
+
+/* Navbar start */
+#navbar{
+    background-color: rgba(198, 0, 0, 0.822);
+}
+
+#logo img{
+    border-radius: 10px;
+    width: 160px;
+    margin-left: 40px;
+}
+
+.navbar-nav{
+    margin-left: 50px;
+}
+
+.navbar-brand {
+    background: transparent;
+}
+
+.nav-item .nav-link{
+    color: rgb(0, 0, 0);
+    margin-left: 10px;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.nav-item .nav-link:hover{
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+}
+
+#navbar form button{
+    background: rgb(255, 255, 255);
+    color: rgba(80, 3, 3, 0.792);
+    font-weight: bold;
+   
+    border: 1px solid white;
+}
+/* Navbar end */
+
+/* home section start */
+#home {
+    width: 100%;
+    height: 90vh;
+    background-image: url('images/server.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 88%;
+}
+
+#home .content{
+   padding-top: 210px;
+   margin-left: 56px;
+}
+
+#home .content h3{
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+}
+
+#home .content p{
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#btn{
+    width: 150px;
+    height: 36px;
+    margin-top: 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+#btn:hover{
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+/* home section end */
+
+/* keunggulan section end */
+#keunggulan{
+    background-color: rgb(255, 255, 255);
+}
+/* keunggulan section end */
