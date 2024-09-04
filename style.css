@@ -25,6 +25,8 @@ html ::-webkit-scrollbar{
 /* Navbar start */
 #navbar{
     background-color: rgba(198, 0, 0, 0.822);
+    position: relative;
+    z-index: 999;
 }
 
 #logo img{
@@ -46,6 +48,7 @@ html ::-webkit-scrollbar{
     margin-left: 10px;
     font-weight: bold;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 .nav-item .nav-link:hover{
@@ -58,7 +61,6 @@ html ::-webkit-scrollbar{
     background: rgb(255, 255, 255);
     color: rgba(80, 3, 3, 0.792);
     font-weight: bold;
-   
     border: 1px solid white;
 }
 /* Navbar end */
@@ -66,8 +68,6 @@ html ::-webkit-scrollbar{
 /* home section start */
 #home {
     width: 100%;
-    height: 90vh;
-    background-image: url('images/server.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 88%;
@@ -76,6 +76,7 @@ html ::-webkit-scrollbar{
 #home .content{
    padding-top: 210px;
    margin-left: 56px;
+   position: relative;
 }
 
 #home .content h3{
@@ -114,4 +115,54 @@ html ::-webkit-scrollbar{
 #keunggulan{
     background-color: rgb(255, 255, 255);
 }
+
+.lingkaran{
+    display: inline-block;
+    border-radius: 50%;
+    width: 150px;
+    margin: auto;
+    height: 150px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(191, 1, 1, 0.879);
+}
+
+.lingkaran i{
+    position: relative;
+    top: 30px;
+}
 /* keunggulan section end */
+
+/* media-partner section end */
+#media-partner{
+    background-color: rgb(255, 255, 255);
+}
+/* media-partner section end */
+
+/* logo media-partner section end */
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+.logos {
+    overflow: hidden;
+    padding: 60px 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
+}
+
+.logos-slide {
+    display: inline-block;
+    animation: 10s slide infinite linear;
+  }
+  
+  .logos-slide img {
+    height: 50px;
+    margin: 0 50px;
+  }
+/* logo media-partner section end */
