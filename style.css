@@ -5,10 +5,7 @@
     font-family: "Merriweather", serif;
 }
 
-.all-content{
-    background: rgb(255, 255, 255);
-}
-
+/* 
 html ::-webkit-scrollbar-track{
     background: transparent;
 }
@@ -19,53 +16,107 @@ html ::-webkit-scrollbar-thumb{
 }
 
 html ::-webkit-scrollbar{
-    width: 10px;
+    width: 100%;
+} */
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body {
+    overflow-x: hidden;
 }
 
 /* Navbar start */
-#navbar{
-    background-color: rgba(198, 0, 0, 0.822);
+ .awal {
+    /* padding-top: 50px !important; */
+    background-color: rgb(240, 18, 18);
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
     position: relative;
-    z-index: 999;
+    z-index: 999999 ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} 
+
+
+
+.logo {
+    margin: 0 !important;
 }
 
-#logo img{
-    border-radius: 10px;
-    width: 160px;
-    margin-left: 40px;
+.logo img{
+    width: 100%;
 }
 
-.navbar-nav{
-    margin-left: 50px;
+.list {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-1945  {
+    display: flex;
+    gap: 1rem;
+    text-decoration: none;
+    justify-content: center;
+    margin: 0 !important;
+    height: 25px;
 }
 
-.navbar-brand {
-    background: transparent;
+li {
+    color: white;
+    font-size: 18px;
+    font-family: "Poppins", sans-serif;
 }
 
-.nav-item .nav-link{
-    color: rgb(0, 0, 0);
-    margin-left: 10px;
-    font-weight: bold;
+ul a {
+    text-decoration: none;
+    z-index: 1;
+}
+
+ul a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+.icon-navbar {
+  font-size: 15px;
+  display: none;
+}
+
+@media screen and (max-width: 750px) {
+  .navbar-1945 {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(202, 35, 35);
+    padding-block: 20px;
+    padding-inline: 50px;
     transition: 0.5s;
+  }
+
+    .navbar-1945.active{
+      display: flex;
+      border-top: 1px solid rgba(255, 255, 255,0.2);
+  }
+  
+  .icon-navbar{ 
+    display: block;
     cursor: pointer;
-}
-
-.nav-item .nav-link:hover{
-    background: rgb(255, 255, 255);
-    border-radius: 5px;
-    color: rgb(0, 0, 0);
-}
-
-#navbar form button{
-    background: rgb(255, 255, 255);
-    color: rgba(80, 3, 3, 0.792);
-    font-weight: bold;
-    border: 1px solid white;
+  }
 }
 /* Navbar end */
 
-/* home section start */
+/* home section stanurt */
 #home {
     width: 100%;
     background-repeat: no-repeat;
@@ -80,26 +131,30 @@ html ::-webkit-scrollbar{
 }
 
 #home .content h3{
-    font-size: 50px;
+    font-size: 60px;
+    font-weight: bold;
     color: rgb(255, 255, 255);
+
 }
 
 #home .content p{
     margin-top: 10px;
-    color: rgb(0, 0, 0);
-    font-family: "Manrope", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
 }
 
 #btn{
     width: 150px;
     height: 36px;
     margin-top: 20px;
-    background: rgb(255, 255, 255);
-    border-radius: 5px;
+    background: rgb(240, 18, 18);
+    border-radius: 7px;
     font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
     border: none;
     transition: 0.5s ease;
     cursor: pointer;
@@ -107,13 +162,35 @@ html ::-webkit-scrollbar{
 
 #btn:hover{
     background: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
+    color: rgb(13, 11, 11);
 }
 /* home section end */
 
-/* keunggulan section end */
-#keunggulan{
+/* keunggulan section start */
+#keunggulan {
     background-color: rgb(255, 255, 255);
+}
+ 
+@media screen and(min-width:550px){
+  #keunggulan h5.display-3{
+    font-size: 65px;
+  }
+}
+@media screen and(min-width:400px){
+  #keunggulan h5.display-3{
+    font-size: 45px;
+  }
+}
+#keunggulan h6 {
+  font-size: 19px;  
+  font-weight: 70;
+  font-family: "Georgia", sans-serif;
+  color: black;  
+} 
+
+.keunggulan {
+  display: flex;
+
 }
 
 .lingkaran{
@@ -123,22 +200,43 @@ html ::-webkit-scrollbar{
     margin: auto;
     height: 150px;
     color: rgb(255, 255, 255);
-    background-color: rgba(191, 1, 1, 0.879);
+    background-color: rgb(240, 18, 18);
 }
 
 .lingkaran i{
     position: relative;
-    top: 30px;
+    top: 33px;
+    gap: 1rem;
+}
+
+.card-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .pt-2.keunggulan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 /* keunggulan section end */
 
-/* media-partner section end */
+/* media-partner section start */
 #media-partner{
     background-color: rgb(255, 255, 255);
 }
+
+.keunggulan h1.display-15{
+  font-size: 65px;
+}
 /* media-partner section end */
 
-/* logo media-partner section end */
+/* logo media-partner section start */
 @keyframes slide {
     from {
       transform: translateX(0);
@@ -147,7 +245,11 @@ html ::-webkit-scrollbar{
       transform: translateX(-100%);
     }
   }
-  
+
+.display-3 {
+  margin-top: 50px;
+}
+
 .logos {
     overflow: hidden;
     padding: 60px 0;
@@ -166,3 +268,201 @@ html ::-webkit-scrollbar{
     margin: 0 50px;
   }
 /* logo media-partner section end */
+
+/* coverage area section start */
+#coverage-area{
+    background-color: rgb(255, 255, 255);
+}
+
+.display-3 {
+  margin-top: 0px !important;
+}
+/* coverage area section end */
+
+/* img coverage area section start */
+.card {
+    border: 0 !important;
+    width: 200px !important; 
+}
+
+.card-title {
+    font-size: 15px;
+}
+
+.foto {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* img coverage area section end */
+
+/* footer section start */
+footer {
+    width: 100vw;
+    bottom: 0;
+    background: linear-gradient(to right, rgb(240, 18, 18), #7f1d1d) ;
+    color: #fff;
+    padding: 50px 0 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.row {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+.logo {
+    width: 170px;
+    margin-bottom: 0px;
+}
+
+.col h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.email-id {
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+ul li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .footer-section {
+    flex: 1;
+    padding: 20px;
+    min-width: 250px;
+  }
+  
+  .footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    margin-bottom: 20px;
+  }
+  
+  .contact span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 10px;
+  }
+
+  .contact>span:nth-child(2)>div{
+    transform: translateY(-2px);
+  }
+  
+  .socials a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    margin-right: 10px;
+    transition: all 0.3s;
+    margin-top: 20px;
+  }
+  
+  .socials a:hover {
+    background: #fff;
+    color: #ef4444;
+  }
+  
+  .links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .links ul li {
+    margin-bottom: 10px;
+  }
+  
+  .links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .links ul li a:hover {
+    color: #ffd700;
+    padding-left: 5px;
+  }
+  
+  .contact-form .contact-input {
+    background: rgb(255, 255, 255); 
+    color: #d6c2c2;
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    padding: 0.9rem 1.4rem;
+    border: none;
+    width: 100%;
+  }
+
+  .btn-primary {
+    background: #ffd700;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .btn-primary:hover {
+    background: #fff;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .footer-section {
+      flex-basis: 100%;
+    }
+  }
+/* footer section end */
+
+
