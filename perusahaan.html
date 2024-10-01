@@ -1,30 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beranda</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Profil</title>
+  <link rel="stylesheet" href="style2.css">
 
-  <!--Boostrap links-->
+  <!-- Bootstrap and Font Awesome links -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
-<!--Boostrap links-->
-
-<!--Font link-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-<!--this is icons link-->
 
 <body>
-   <!--Navbar start-->
-   <nav> 
+  <!-- Navbar start -->
+  <nav>
     <div class="awal">
       <div class="logo">
-        <img src="assets/logo_baru-removebg-preview.png" alt="">
+        <img src="assets/logo_baru-removebg-preview.png" alt="Logo">
       </div>
       <div class="list-navbar">
         <ul id="menu-list" class="navbar-1945">
@@ -34,10 +29,10 @@
           <a href="perusahaan.html">
             <li style="color: rgb(255, 255, 0);">Profil</li>
           </a>
-          <a href="">
+          <a href="paket.html">
             <li>Paket</li>
           </a>
-          <a href="">
+          <a href="lokasi.html">
             <li>Lokasi</li>
           </a>
         </ul>
@@ -45,6 +40,292 @@
       <div id="icon-navbar" class="icon-navbar">
         <i class="fa-solid fa-list fa-2x" style="color: #ffffff;"></i>
       </div>
-    </div> 
+    </div>
   </nav>
-  <!--Navbar end-->
+  <!-- Navbar end -->
+
+  <!-- Tentang Kami start -->
+  <section id="tentang-kami">
+    <div class="container">
+      <div class="heading"> Tentang Kami </div>
+      <div class="bungkus d-flex align-items-center">
+        <div class="col-md-5">
+          <div class="card" data-aos="fade-right" data-aos-duration="1000">
+            <img src="assets/perusahaan.jpg" alt="Tentang Kami">
+          </div>
+        </div>
+
+        <div class="ratakanan" data-aos="fade-left" data-aos-duration="1000">
+          <p>
+            GarudaLink berdiri pada tahun 2010 dengan tujuan menyediakan akses internet berkualitas tinggi untuk bisnis dan perorangan.
+            Sejak awal berdiri, GarudaLink telah berkomitmen untuk memberikan layanan internet yang cepat, stabil,
+            dan andal, serta terus berinovasi dalam menyediakan solusi jaringan yang sesuai dengan kebutuhan pasar yang
+            terus berkembang. Dengan visi untuk menjadi pemimpin dalam industri ISP di Indonesia,
+            GarudaLink berfokus pada pelayanan yang prima dan dukungan teknis 24/7,
+            memastikan kepuasan dan kenyamanan pelanggan dalam setiap penggunaan layanan internet.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Tentang Kami end -->
+
+  <!-- visi misi start -->
+  <section id="visi-misi" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Visi & Misi</h2>
+        
+        <div class="display-flex row justify-content-center align-items-center w-100">
+            <!-- Visi -->
+            <div class="col-lg-5 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <div class="icon-box text-center">
+                            <i class="bi bi-eye"></i>
+                        </div>
+                        <h3 class="card-title text-center">Visi</h3>
+                        <p class="card-text text-center">Menjadi penyedia layanan internet terpercaya yang menghubungkan dan memberdayakan masyarakat Indonesia dengan konektivitas berkualitas tinggi.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Misi -->
+            <div class="col-lg-5 col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column">
+                        <div class="icon-box text-center">
+                            <i class="bi bi-bullseye"></i>
+                        </div>
+                        <h3 class="card-title text-center">Misi</h3>
+                        <ul class="mission-list">
+                            <li>Menyediakan layanan internet cepat, stabil, dan terjangkau.</li>
+                            <li>Mengembangkan infrastruktur jaringan yang handal dan luas.</li>
+                            <li>Memberikan solusi konektivitas inovatif untuk berbagai kebutuhan.</li>
+                            <li>Menjaga kepuasan pelanggan melalui layanan pelanggan yang responsif.</li>
+                            <li>Berperan aktif dalam mempercepat transformasi digital Indonesia.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+  <!-- visi misi end -->
+
+  <!-- Testimonial section start -->
+  <section class="testimoni">
+    <div class="class">
+      <div class="section-header">
+        <h2 class="title">Apa Pendapat Mereka Tentang GarudaLink?</h2>
+      </div>
+      <div class="testimoni-content swiper">
+        <div class="swiper-wrapper">
+          <!-- Testimonial 1 -->
+          <div class="testimoni-items swiper-slide">
+            <div class="info">
+              <img src="images profil/xaviera.jfif" alt="img">
+              <div class="text-box">
+                <h3 class="name">Xaviera Putri</h3>
+                <span class="job">IT Manager The Premiere Hotel</span>
+              </div>
+            </div>
+            <p>
+              Secara keseluruhan, saya sangat merekomendasikan Garuda Link.
+              Mereka menawarkan layanan yang solid, kecepatan yang mengesankan,
+              dan dukungan pelanggan yang sangat baik. Jika Anda mencari ISP yang handal, Garuda Link adalah pilihan yang tepat!
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+  
+          <!-- Testimonial 2 -->
+          <div class="testimoni-items swiper-slide">
+            <div class="info">
+              <img src="images profil/kevin 3.jpg" alt="img">
+              <div class="text-box">
+                <h3 class="name">Kevin Lius Bong</h3>
+                <span class="job">Owner Winter Cafe</span>
+              </div>
+            </div>
+            <p>
+              Tim teknis sigap dalam merespons keluhan dan menyelesaikan masalah teknis.
+              Pengguna bisnis sering kali merasa puas dengan dukungan 24/7 yang diberikan.
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+  
+          <!-- Testimonial 3 -->
+          <div class="testimoni-items swiper-slide">
+            <div class="info">
+              <img src="images profil/shakira 4.jfif" alt="img">
+              <div class="text-box">
+                <h3 class="name">Shakirah Amirah</h3>
+                <span class="job">IT Support Rumah Sakit Insan Cendekia</span>
+              </div>
+            </div>
+            <p>
+              Sebagai pengguna GarudaLink, saya merasa layanan internet yang disediakan cukup stabil,
+              terutama untuk aktivitas sehari-hari seperti browsing, streaming, dan meeting online.
+              Kecepatan internet sesuai dengan paket yang saya pilih, dan jarang terjadi gangguan signifikan.
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+  
+          <!-- Testimonial 4 -->
+          <div class="testimoni-items swiper-slide">
+            <div class="info">
+              <img src="images profil/elon 3.jfif" alt="img">
+              <div class="text-box">
+                <h3 class="name">Elon Musk</h3>
+                <span class="job">CEO SpaceX</span>
+              </div>
+            </div>
+            <p>
+              Saya merasa harga yang ditawarkan sepadan dengan layanan yang diberikan.
+              Selain itu, terdapat beberapa opsi paket dengan kecepatan berbeda,
+              sehingga memudahkan pengguna untuk memilih sesuai kebutuhan mereka.
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+  
+          <!-- Testimonial 5 -->
+          <div class="testimoni-items swiper-slide">
+            <div class="info">
+              <img src="images profil/vina 2.jfif" alt="img">
+              <div class="text-box">
+                <h3 class="name">Vina Muliana</h3>
+                <span class="job">Owner AvosCare Klinik</span>
+              </div>
+            </div>
+            <p>
+              Dengan GarudaLink, klinik kami tidak pernah mengalami gangguan yang signifikan. Semua data pasien dapat diakses dengan cepat,
+              dan proses registrasi hingga penjadwalan kunjungan berjalan lancar tanpa kendala.
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="testimoni-items swiper-slide">
+            <div class="info">
+              <img src="images profil/jeff 2.jfif" alt="img">
+              <div class="text-box">
+                <h3 class="name">Jeff Bezos</h3>
+                <span class="job">CEO Skybox</span>
+              </div>
+            </div>
+            <p>
+              Sebagai CEO perusahaan IT, kebutuhan kami akan internet cepat dan stabil adalah hal yang krusial.
+              Setelah menggunakan layanan GarudaLink, saya bisa mengatakan bahwa ini adalah salah satu penyedia internet  terbaik yang pernah kami gunakan.
+            </p>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </div>
+
+          <!-- Repeat for other testimonials -->
+          <!-- Testimonial 2, 3, 4, 5, 6... -->
+        </div>
+        <div class="swiper-pagination"></div>
+
+        <!-- Navigation buttons (optional) -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+
+        <!-- Scrollbar (optional) -->
+      </div>
+    </div>
+  </section>
+  <!-- Testimonial section end -->
+
+  <!-- footer start -->
+<footer>
+  <div class="footer-bottom">
+    Copyright &copy; 2024 GarudaLink. All right reserved. 
+  </div>
+</footer>
+ 
+  <!-- footer end -->
+
+  <!-- Bootstrap, Swiper, and other scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".swiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      loop: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
+      autoplay: {
+        delay: 4500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
+
+    AOS.init();
+  </script>
+</body>
+</html>

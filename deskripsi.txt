@@ -1,0 +1,88 @@
+Bagian Beranda buat Navbar, Foto ISP, Keunggulan, Media Partner, Coverage Area, Footer, 
+Bagian Profile tentang Perusahaan (visi dan misi, bagian divisi, informasi perusahaan)
+Bagian Paket berisi Paket Layanan
+Bagian Jangkauan 
+
+
+Coverage area membantu perusahaan dalam menentukan wilayah yang dapat dilayani. 
+Ini penting untuk perencanaan dan penargetan pasar, 
+serta untuk memastikan bahwa pelanggan di wilayah tersebut 
+dapat mendapatkan layanan yang stabil dan cepat. 
+
+Tentang Kami GarudaLink
+GarudaLink berdiri pada tahun 2010 dengan tujuan menyediakan akses internet berkualitas tinggi untuk bisnis dan perorangan. 
+Sejak awal berdirinya, Garuda Link telah berkomitmen untuk memberikan layanan internet yang cepat, stabil, 
+dan andal, serta terus berinovasi dalam menyediakan solusi jaringan yang sesuai dengan kebutuhan pasar yang terus berkembang.
+
+GarudaLink memiliki infrastruktur jaringan yang canggih, 
+didukung oleh tim teknis yang profesional dan siap memberikan pelayanan terbaik kepada pelanggan. 
+Layanan yang ditawarkan Garuda Link mencakup internet fiber optik, layanan dedicated internet, jaringan privat (VPN), 
+yang dirancang untuk mendukung bisnis dari berbagai skala, mulai dari usaha kecil hingga perusahaan besar.
+
+
+Dengan visi untuk menjadi pemimpin dalam industri ISP di Indonesia, 
+Garuda Link berfokus pada pelayanan yang prima dan dukungan teknis 24/7, 
+memastikan kepuasan dan kenyamanan pelanggan dalam setiap penggunaan layanan internetnya.
+
+
+
+/* Tentang kami start */
+#tentang-kami{
+    width: 100%;
+    height: 100vh;
+}
+
+#tentang-kami .container{
+    padding-top: 20px;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#tentang-kami .card{
+    border-radius: 10px;
+}
+
+#tentang-kami .card img{
+    border-radius: 10px;
+}
+
+.ratakanan{
+    text-align: justify;
+    font-size: 18px;
+}
+/* Tentang kami end *
+
+
+
+<!--tentang kami start-->
+  <!-- <section id="tentang-kami">
+    <div class="container">
+      <div class="heading"> Tentang Kami</div>
+      <div class="row" style="display: flex;  justify-content: center; ">
+        <div class="col-md-6s">
+          <div class="card">
+            <img src="assets/perusahaan.jpg">
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <p class="ratakanan">GarudaLink berdiri pada tahun 2010 dengan menyediakan akses internet berkualitas tinggi
+            untuk bisnis dan perorangan.
+            Sejak awal berdirinya, GarudaLink telah berkomitmen untuk memberikan layanan internet yang cepat, stabil,
+            dan andal, serta terus berinovasi dalam menyediakan solusi jaringan yang sesuai dengan kebutuhan pasar yang
+            terus berkembang.
+            <br><br>Dengan visi untuk menjadi pemimpin dalam industri ISP di Indonesia,
+            GarudaLink berfokus pada pelayanan yang prima dan dukungan teknis 24/7,
+            memastikan kepuasan dan kenyamanan pelanggan dalam setiap penggunaan layanan internet
+          </p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!--tentang kami end-->
