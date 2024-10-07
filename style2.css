@@ -2,8 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: "Merriweather", serif; */
-  font-family: "Poppins", sans-serif;
+  font-family: "Merriweather", serif;
   scrollbar-width: thin;
   scrollbar-color: #a3a3a3 #cccccc;
 }
@@ -161,12 +160,13 @@ display: none;
 }
 
 .ratakanan {
-  text-align: justify;
-  font-family: "Inter", sans-serif;
-  font-size: 15px;
+  text-align: start;
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
   line-height: 1.6; 
   max-width: 500px; 
   margin: 0 45px;
+  color: #000;
 }
 
 @media (max-width: 768px) {
@@ -206,6 +206,7 @@ display: none;
 
 .card-text.text-center {
   padding-top: 20px;
+  font-family: "Poppins", sans-serif;
 }
 
 #visi-misi .card:hover {
@@ -214,7 +215,6 @@ display: none;
 
 #visi-misi .card-body {
   padding: 30px;
-  height: 500px;  
 }
 
 #visi-misi .icon-box {
@@ -264,7 +264,7 @@ display: none;
 /* testimoni start */
 .testimoni {
   background-color: white;
-  padding: 50px 0;
+  padding: 60px;
 }
 
 .section-header .title {
@@ -307,11 +307,13 @@ display: none;
 .text-box .name {
   font-size: 18px;
   font-weight: bold;
+  font-family: "Poppins", sans-serif;
 }
 
 .text-box .job {
   font-size: 14px;
   color: #999;
+  font-family: "Poppins", sans-serif;
 }
 
 .testimoni-items p {
@@ -319,24 +321,11 @@ display: none;
   color: #555;
   line-height: 1.5;
   margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
 }
 
 .rating i {
   color: #f39c12;
-}
-
-.swiper-pagination {
-  margin-top: 20px;
-}
-
-.swiper-pagination-bullet {
-  background: #333;
-  opacity: 0.8;
-}
-
-.swiper-pagination-bullet-active {
-  background: #007bff;
-  opacity: 1;
 }
 /* testimoni end */
 
@@ -349,6 +338,7 @@ footer {
   padding: 50px 0 20px;
   font-size: 16px;
   line-height: 1.5;
+  font-family: "Merriweather", serif;
 }
 
 .row {
@@ -414,6 +404,7 @@ ul li a {
 
 .about p {
   margin-bottom: 20px;
+  font-family: "Merriweather", serif;
 }
 
 .contact span {
@@ -422,6 +413,7 @@ ul li a {
   align-items: center;
   margin-bottom: 10px;
   gap: 10px;
+  font-family: "Merriweather", serif;
 }
 
 .contact>span:nth-child(2)>div{
@@ -462,7 +454,7 @@ ul li a {
 }
 
 .links ul li a:hover {
-  color: #ffd700;
+  color: #ffd900;
   padding-left: 5px;
 }
 
@@ -474,9 +466,10 @@ ul li a {
   padding: 0.9rem 1.4rem;
   border: none;
   width: 100%;
+  font-family: "Merriweather", serif;
 }
 
-.btn-primary {
+.btn-warning {
   background: #ffd700;
   color: #000;
   border: none;
@@ -485,7 +478,7 @@ ul li a {
   transition: all 0.3s;
 }
 
-.btn-primary:hover {
+.btn-warning:hover {
   background: #fff;
 }
 
@@ -493,6 +486,7 @@ ul li a {
   text-align: center;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: "Merriweather", serif;
 }
 
 @media screen and (max-width: 768px) {
