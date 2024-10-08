@@ -25,13 +25,13 @@
       <div class="list-navbar">
         <ul id="menu-list" class="navbar-1945">
           <a href="beranda.html">
-            <li>Beranda</li>
+            <li>BERANDA</li>
           </a>
           <a href="perusahaan.html">
-            <li style="color: rgb(255, 255, 0);">Profil</li>
+            <li class="aktif">PROFIL</li>
           </a>
           <a href="paket.html">
-            <li>Paket</li>
+            <li>PAKET</li>
           </a>
         </ul>
       </div>
@@ -47,20 +47,14 @@
     <div class="container">
       <div class="heading"> Tentang Kami </div>
       <div class="bungkus d-flex align-items-center">
-        <div class="col-md-5">
-          <div class="card" data-aos="fade-right" data-aos-duration="1000">
-            <img src="assets/perusahaan.jpg" alt="Tentang Kami">
-          </div>
-        </div>
+        <img src="assets/perusahaan.jpg" alt="Tentang Kami">
 
         <div class="ratakanan" data-aos="fade-left" data-aos-duration="1000">
           <p>
             GarudaLink berdiri pada tahun 2010 dengan tujuan menyediakan akses internet berkualitas tinggi untuk bisnis
             dan perorangan.
             Sejak awal berdiri, GarudaLink telah berkomitmen untuk memberikan layanan internet yang cepat, stabil,
-            dan andal, serta terus berinovasi dalam menyediakan solusi jaringan yang sesuai dengan kebutuhan pasar yang
-            terus berkembang. Dengan visi untuk menjadi pemimpin dalam industri ISP di Indonesia,
-            GarudaLink berfokus pada pelayanan yang prima dan dukungan teknis 24/7,
+            dan andal, serta terus berinovasi berfokus pada pelayanan yang prima dan dukungan teknis 24/7,
             memastikan kepuasan dan kenyamanan pelanggan dalam setiap penggunaan layanan internet.
           </p>
         </div>
@@ -70,14 +64,13 @@
   <!-- Tentang Kami end -->
 
   <!-- visi misi start -->
-  <section id="visi-misi" class="py-1">
-    <div class="container">
+  <section id="visi-misi" class="">
+    <div class="container-visimisi">
       <h2 class="text-center mb-5">Visi & Misi</h2>
 
-      <div class="display-flex row justify-content-center align-items-center w-100" data-aos="zoom-in">
+      <div class="   w-100  box-visimisi" data-aos="zoom-in">
         <!-- Visi -->
-        <div class="col-lg-5 col-md-6 mb-4">
-          <div class="card h-100">
+          <div class="card h-100 card-visimisi">
             <div class="card-body d-flex flex-column">
               <div class="icon-box text-center">
                 <i class="bi bi-eye"></i>
@@ -87,15 +80,10 @@
                 memberdayakan masyarakat Indonesia dengan konektivitas berkualitas tinggi.</p>
             </div>
           </div>
-        </div>
 
         <!-- Misi -->
-        <div class="col-lg-5 col-md-6 mb-4">
-          <div class="card h-100">
+          <div class="card h-100 card-visimisi">
             <div class="card-body d-flex flex-column">
-              <div class="icon-box text-center">
-                <i class="bi bi-bullseye"></i>
-              </div>
               <h3 class="card-title text-center">Misi</h3>
               <ul class="mission-list">
                 <li>Menyediakan layanan internet cepat, stabil, dan terjangkau</li>
@@ -105,14 +93,13 @@
                 <li>Berperan aktif dalam mempercepat transformasi digital Indonesia.</li>
               </ul>
             </div>
-          </div>
         </div>
       </div>
     </div>
   </section>
   <!-- visi misi end -->
 
-  <!-- Testimonial section start -->
+  <!-- testimoni start -->
   <section class="testimoni">
     <div class="class">
       <div class="section-header">
@@ -253,7 +240,7 @@
       </div>
     </div>
   </section>
-  <!-- Testimonial section end -->
+  <!-- testimoni end -->
 
   <!-- footer start -->
   <footer>
@@ -278,7 +265,7 @@
           <form action="#" method="post">
             <input type="email" name="email" class="text-input contact-input" placeholder="Your email address...">
             <textarea name="message" class="text-input contact-input" placeholder="Your message..."></textarea>
-            <button type="submit" class="btn btn-warning">Send</button>
+            <button type="submit" class="btn btn-primary">Send</button>
           </form>
         </div>
       </div>
@@ -337,7 +324,6 @@
         },
       },
     });
-
 
     AOS.init();
   </script>

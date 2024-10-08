@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Merriweather", serif;
+  /* font-family: "Merriweather", serif; */
   scrollbar-width: thin;
   scrollbar-color: #a3a3a3 #cccccc;
 }
@@ -31,9 +31,8 @@ body {
 
 /* Navbar start */
 .awal {
-  /* padding-top: 50px !important; */
   background-color: rgb(240, 18, 18);
-  padding: 20px;
+  padding: 20px 3rem;
   font-family: "Poppins", sans-serif;
   position: relative;
   z-index: 999999 ;
@@ -60,27 +59,33 @@ body {
 
 .navbar-1945  {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   text-decoration: none;
   justify-content: center;
   margin: 0 !important;
   height: 25px;
 }
 
+.aktif {
+  border-bottom: 3px solid #006BFF; 
+  padding-bottom: 5px; 
+}
+
 li {
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
+
 
 ul a {
   text-decoration: none;
   z-index: 1;
 }
 
-ul a:hover{
-  text-decoration: underline;
-  color: white;
+ul li:hover{
+  color: #172554;
 }
 
 .icon-navbar {

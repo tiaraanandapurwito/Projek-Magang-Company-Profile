@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Merriweather", serif;
+  /* font-family: "Merriweather", serif; */
   scrollbar-width: thin;
   scrollbar-color: #a3a3a3 #cccccc;
 }
@@ -31,9 +31,8 @@ body {
 
 /* Navbar start */
 .awal {
-  /* padding-top: 50px !important; */
   background-color: rgb(240, 18, 18);
-  padding: 20px;
+  padding: 20px 3rem;
   font-family: "Poppins", sans-serif;
   position: relative;
   z-index: 999999 ;
@@ -60,27 +59,33 @@ body {
 
 .navbar-1945  {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   text-decoration: none;
   justify-content: center;
   margin: 0 !important;
   height: 25px;
 }
 
+.aktif {
+  border-bottom: 3px solid #433878; 
+  padding-bottom: 5px; 
+}
+
 li {
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   font-family: "Poppins", sans-serif;
+  font-weight: 400;
 }
+
 
 ul a {
   text-decoration: none;
   z-index: 1;
 }
 
-ul a:hover{
-  text-decoration: underline;
-  color: white;
+ul li:hover{
+  color: #172554;
 }
 
 .icon-navbar {
@@ -119,9 +124,8 @@ display: none;
 /* tentang kami start */
 #tentang-kami {
   width: 100%;
-  min-height: 100vh; 
   background-color: white; 
-  padding: 30px 70px;
+  padding: 30px 0px;
 }
 
 #tentang-kami .container {
@@ -130,21 +134,28 @@ display: none;
 
 .heading {
   text-align: center;
+  font-family: "Raleway", Sans-serif;
   margin-bottom: 30px;
   color: #000;
-  font-size: 43px; 
-  font-weight: bold;
+  font-size: 40px; 
 }
 
 .bungkus {
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-between;
+  flex-wrap: nowrap; 
+  justify-content: center;
   align-items: center;
   text-align: center;
   gap: 25px; 
 }
 
+.bungkus img{
+  width: 50%;
+}
+
+#tentang-kami .col-md-5 {
+  margin:0 auto;
+}
 #tentang-kami .card {
   border-radius: 10px;
   width: 100%;
@@ -153,26 +164,40 @@ display: none;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); 
 }
 
-#tentang-kami .card img {
-  width: 100%; 
-  height: auto; 
-  border-radius: 10px;
-}
-
 .ratakanan {
   text-align: start;
-  font-family: "Poppins", sans-serif;
-  font-size: 19px;
+  font-family: 'Karla', sans-serif;
+  font-size: 17px;
   line-height: 1.6; 
-  max-width: 500px; 
+  /* max-width: 500px;   */
   margin: 0 45px;
   color: #000;
 }
 
-@media (max-width: 768px) {
+  @media screen and (max-width: 768px){
+    #tentang-kami .bungkus img {
+      padding:0 5rem;
+    }
+
+    .bungkus {
+      flex-wrap: wrap;
+    }
+    .bungkus img {
+      width: 100%;
+    }
+  }
+@media (max-width: 640px) {
   .bungkus {
     flex-direction: column; 
     text-align: center;
+  }
+  
+  #tentang-kami {
+    padding: 2rem;
+  }
+
+  #tentang-kami .bungkus img {
+    padding: 0;
   }
   
   #tentang-kami .card {
@@ -183,6 +208,7 @@ display: none;
     margin: 0;
   }
 }
+
 /* tentang kami end */
 
 /* visi misi start */
@@ -191,10 +217,12 @@ display: none;
 }
 
 #visi-misi h2 {
-  font-size: 2.5rem;
+  font-size: 35px;
   color: #000000;
-  font-weight: 700;
+  font-weight: 500;
   text-transform: uppercase;
+  font-family: "Raleway", Sans-serif;
+  padding-top: 2rem;
 }
 
 #visi-misi .card {
@@ -256,8 +284,39 @@ display: none;
   top: 0;
 }
 
+.box-visimisi {
+  padding: 0 2rem;
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+#visi-misi .box-visimisi .card-visimisi {
+  width: 50%;
+}
+
 .mission-list > li {
   color: black;
+}
+
+@media screen and (max-width: 768px){
+  .box-visimisi {
+    flex-wrap: wrap;
+  }
+
+  .card-visimisi {
+    width: 100%;
+  }
+
+  .box-visimisi {
+    padding: 0 2rem;
+  }
+
+  #visi-misi .card {
+    width: 100% !important;
+  }
 }
 /* visi misi end */
 
@@ -268,10 +327,12 @@ display: none;
 }
 
 .section-header .title {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 27px;
+  font-weight: 500;
+  font-family: "Raleway", Sans-serif;
   text-align: center;
   margin-bottom: 30px;
+
 }
 
 .testimoni-content {
@@ -312,7 +373,7 @@ display: none;
 
 .text-box .job {
   font-size: 14px;
-  color: #999;
+  color: #000000;
   font-family: "Poppins", sans-serif;
 }
 
@@ -335,10 +396,9 @@ footer {
   bottom: 0;
   background: linear-gradient(to right, rgb(240, 18, 18), #7f1d1d) ;
   color: #fff;
-  padding: 50px 0 20px;
-  font-size: 16px;
+  padding: 20px 0 20px;
+  font-size: 19px;
   line-height: 1.5;
-  font-family: "Merriweather", serif;
 }
 
 .row {
@@ -404,7 +464,6 @@ ul li a {
 
 .about p {
   margin-bottom: 20px;
-  font-family: "Merriweather", serif;
 }
 
 .contact span {
@@ -413,7 +472,6 @@ ul li a {
   align-items: center;
   margin-bottom: 10px;
   gap: 10px;
-  font-family: "Merriweather", serif;
 }
 
 .contact>span:nth-child(2)>div{
@@ -466,27 +524,26 @@ ul li a {
   padding: 0.9rem 1.4rem;
   border: none;
   width: 100%;
-  font-family: "Merriweather", serif;
 }
 
-.btn-warning {
+.btn-primary {
   background: #ffd700;
-  color: #000;
+  color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   transition: all 0.3s;
 }
 
-.btn-warning:hover {
-  background: #fff;
+.btn-primary:hover {
+  background:#fff;
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
+  font-size: 15px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-family: "Merriweather", serif;
 }
 
 @media screen and (max-width: 768px) {

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peta Jaringan Tiang - Pekanbaru</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <style>
+        body {
+            zoom: 110%; /* Zoom set to 110% for better visibility */
+        }
+        #map {
+            height: 60vh; /* Map size */
+            width: 100%;
+            border: 2px solid #555; /* Border */
+            border-radius: 8px; /* Rounded corners */
+        }
+        /* Legend styles */
+        .legend {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .legend span {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-right: 5px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h3>Peta Tiang Jaringan GarudaLink di Pekanbaru</h3>
+    <!-- Map container -->
+    <div id="map"></div>
+
+    <!-- Legend and explanation -->
+    <div class="legend">
+        <p><strong>Keterangan Titik:</strong></p>
+        <p><span style="background-color: green;"></span> <strong>Tiang Jaringan Terpasang</strong> - Tiang yang sudah aktif dan memberikan layanan.</p>
+        <p><span style="background-color: orange;"></span> <strong>Dalam Pembangunan</strong> - Tiang yang sedang dalam tahap pembangunan.</p>
+        <p><span style="background-color: blue;"></span> <strong>Rencana (2027)</strong> - Rencana tiang yang akan dipasang pada tahun 2027.</p>
+        <p><span style="background-color: red;"></span> <strong>Kantor Cabang</strong> - Lokasi kantor cabang di Pekanbaru.</p>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Function to generate random coordinates within a bounding box
+        function randomCoordinate(minLat, maxLat, minLng, maxLng) {
+            return [
+                minLat + Math.random() * (maxLat - minLat),
+                minLng + Math.random() * (maxLng - minLng)
+            ];
+        }
+
+        // Function to generate a random code
+        function generateCode(prefix, num) {
+            return prefix + num.toString().padStart(3, '0');
+        }
+
+        // Function to get a random location name
+        function getRandomLocation() {
+            const locations = [
+                "Kecamatan Rumbai", "Kecamatan Bukit Raya", "Kecamatan Tampan", "Kecamatan Tenayan Raya",
+                "Kecamatan Sail", "Kecamatan Rumbai Pesisir", "Kecamatan Sukajadi", "Kecamatan Marpoyan Damai",
+                "Kecamatan Payung Sekaki", "Kecamatan Limapuluh", "Kecamatan Senapelan", "Kecamatan Tuah Madani",
+                "Jl. Riau", "Jl. Sudirman", "Jl. Harapan Raya", "Jl. Imam Munandar", "Jl. Kubang Raya",
+                "Jl. Kulim", "Jl. Diponegoro", "Jl. Pattimura", "Jl. Tengku Bey", "Jl. Sisingamangaraja",
+                "Jl. Soekarno Hatta", "Jl. Arifin Ahmad", "Jl. Hangtuah", "Jl. Yos Sudarso", "Jl. SM Amin"
+            ];
+            return locations[Math.floor(Math.random() * locations.length)];
+        }
+
+        // Function to show street or district names in the popup
+        function createPopupContent(locationName, description, code) {
+            return description + "<br><strong>Lokasi:</strong> " + locationName + "<br><strong>Kode:</strong> " + code;
+        }
+
+        // Initialize the map
+        var map = L.map('map').setView([0.5071, 101.4478], 11);
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Define the bounding box for Pekanbaru
+        const minLat = 0.4000;
+        const maxLat = 0.6500;
+        const minLng = 101.3000;
+        const maxLng = 101.6000;
+
+        // Generate points
+        const totalPoints = 500;
+        const terpasangPoints = Math.floor(totalPoints * 0.6); // 60% of total
+        const pembangunanPoints = Math.floor(totalPoints * 0.3); // 30% of total
+        const rencanaPoints = totalPoints - terpasangPoints - pembangunanPoints; // Remaining 10%
+
+        // Function to add markers
+        function addMarkers(count, color, fillColor, prefix, description) {
+            for (let i = 0; i < count; i++) {
+                const coords = randomCoordinate(minLat, maxLat, minLng, maxLng);
+                const location = getRandomLocation();
+                const code = generateCode(prefix, i + 1);
+                
+                L.circleMarker(coords, {
+                    color: color,
+                    radius: 6,
+                    fillColor: fillColor,
+                    fillOpacity: 1
+                }).addTo(map).bindPopup(createPopupContent(location, description, code));
+            }
+        }
+
+        // Add markers for each category
+        addMarkers(terpasangPoints, 'green', '#0f0', 'TJ', 'Tiang Jaringan Terpasang');
+        addMarkers(pembangunanPoints, 'orange', '#FFA500', 'DP', 'Tiang Jaringan Dalam Pembangunan');
+        addMarkers(rencanaPoints, 'blue', '#00f', 'R2027-', 'Rencana Tiang 2027');
+
+        // Add Kantor Cabang
+        var kantorCabang = [
+            {coords: [0.5120, 101.4550], location: "Kantor Cabang Pekanbaru", code: "KC001"}
+        ];
+        kantorCabang.forEach(function(point) {
+            L.circleMarker(point.coords, {
+                color: 'red',
+                radius: 8,
+                fillColor: '#f00',
+                fillOpacity: 1
+            }).addTo(map).bindPopup(createPopupContent(point.location, "Kantor Cabang", point.code));
+        });
+    </script>
+</body>
+</html>
