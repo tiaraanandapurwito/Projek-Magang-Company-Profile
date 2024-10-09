@@ -1,0 +1,27 @@
+body {
+    zoom: 110%;
+}
+
+#map {
+    height: 60vh;
+    width: 100%;
+    border: 2px solid #555;
+    border-radius: 8px;
+}
+
+.legend {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.legend span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.legend-green {
+    background-color: green;
+}

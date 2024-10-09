@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* font-family: "Merriweather", serif; */
   scrollbar-width: thin;
   scrollbar-color: #a3a3a3 #cccccc;
 }
@@ -483,6 +482,7 @@ ul li a {
   width: 35px;
   height: 35px;
   background: white;
+  color: black;
   border-radius: 50%;
   text-align: center;
   line-height: 35px;
@@ -526,16 +526,18 @@ ul li a {
   width: 100%;
 }
 
-.btn-primary {
-  background: #ffd700;
-  color: white;
+.btn-warning {
+  font-weight: bold; /* Menggunakan bold */
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  color: #000;
   border: none;
-  padding: 10px 20px;
+  padding: 20px 20px;
   cursor: pointer;
   transition: all 0.3s;
 }
 
-.btn-primary:hover {
+.btn-warning:hover {
   background:#fff;
 }
 

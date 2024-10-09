@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peta Jaringan Tiang - Pekanbaru</title>
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="peta.css" /> <!-- Link to external CSS -->
+</head>
+<body>
+    <h3>Peta Tiang Jaringan Terpasang GarudaLink di Pekanbaru</h3>
+    <div id="map"></div>
+
+    <div class="legend">
+        <p><strong>Keterangan Titik:</strong></p>
+        <p><span class="legend-green"></span> <strong>Tiang Jaringan Terpasang</strong> - Tiang yang sudah aktif dan memberikan layanan.</p>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Function to generate random coordinates within a bounding box
+        function randomCoordinate(minLat, maxLat, minLng, maxLng) {
+            return [
+                minLat + Math.random() * (maxLat - minLat),
+                minLng + Math.random() * (maxLng - minLng)
+            ];
+        }
+
+        // Function to generate a random code
+        function generateCode(prefix, num) {
+            return prefix + num.toString().padStart(3, '0');
+        }
+
+        // Function to get a random location name
+        function getRandomLocation() {
+            const locations = [
+                "Kecamatan Rumbai", "Kecamatan Bukit Raya", "Kecamatan Tampan", "Kecamatan Tenayan Raya",
+                "Kecamatan Sail", "Kecamatan Rumbai Pesisir", "Kecamatan Sukajadi", "Kecamatan Marpoyan Damai",
+                "Kecamatan Payung Sekaki", "Kecamatan Limapuluh", "Kecamatan Senapelan", "Kecamatan Tuah Madani",
+                "Jl. Riau", "Jl. Sudirman", "Jl. Harapan Raya", "Jl. Imam Munandar", "Jl. Kubang Raya",
+                "Jl. Kulim", "Jl. Diponegoro", "Jl. Pattimura", "Jl. Tengku Bey", "Jl. Sisingamangaraja",
+                "Jl. Soekarno Hatta", "Jl. Arifin Ahmad", "Jl. Hangtuah", "Jl. Yos Sudarso", "Jl. SM Amin"
+            ];
+            return locations[Math.floor(Math.random() * locations.length)];
+        }
+
+        // Function to show street or district names in the popup
+        function createPopupContent(locationName, description, code) {
+            return description + "<br><strong>Lokasi:</strong> " + locationName + "<br><strong>Kode:</strong> " + code;
+        }
+
+        // Initialize the map
+        var map = L.map('map').setView([0.5071, 101.4478], 11);
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Define the bounding box for Pekanbaru
+        const minLat = 0.4000;
+        const maxLat = 0.6500;
+        const minLng = 101.3000;
+        const maxLng = 101.6000;
+
+        // Generate points
+        const terpasangPoints = 300; // Number of 'Tiang Jaringan Terpasang' points
+
+        // Add markers for 'Tiang Jaringan Terpasang'
+        for (let i = 0; i < terpasangPoints; i++) {
+            const coords = randomCoordinate(minLat, maxLat, minLng, maxLng);
+            const location = getRandomLocation();
+            const code = generateCode('TJ', i + 1);
+
+            L.circleMarker(coords, {
+                color: 'green',
+                radius: 6,
+                fillColor: '#0f0',
+                fillOpacity: 1
+            }).addTo(map).bindPopup(createPopupContent(location, 'Tiang Jaringan Terpasang', code));
+        }
+    </script>
+</body>
+</html>
