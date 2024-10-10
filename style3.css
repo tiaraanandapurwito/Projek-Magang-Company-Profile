@@ -123,16 +123,17 @@ display: none;
 /* paket start*/
 #layanan {
   font-family: "Raleway", Sans-serif;
-  font-size: 35px;
+  font-size: 34px;
 }
 
 #jenis {
   font-family: 'Karla', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
 }
+
 #paket-section {
   padding: 60px 0;
-  background-color: #f8f9fa;
+  background-color: white;
 }
 
 #paket-section .container {
@@ -213,8 +214,9 @@ display: none;
   border: none;
   padding: 6px 0;
   font-size: 0.85rem;
-  color: #34495e;
+  color: black;
   background-color: transparent;
+  font-family: 'Karla', sans-serif;
 }
 
 .paket-card .btn {
